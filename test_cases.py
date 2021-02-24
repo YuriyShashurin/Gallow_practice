@@ -4,7 +4,7 @@ from gallow import WORDS, GallowGame, random_word
 WORD = 'blackbox'
 
 def test_random_word():
-    game_test  = GallowGame()
+    game_test  = GallowGame(name='Yura')
     assert game_test.hidden_word in WORDS
 
 @pytest.mark.parametrize("input_letter", ['a', 'b', 'w', 'f'])
