@@ -6,9 +6,10 @@ def random_word(WORDS):
 
 class GallowGame():
 
-    def __init__(self, name):
-        if name:
-            self.name = name
+    def __init__(self, *args):
+        #Для целей тестирования подставляем заданное значение в self.name, если передан параметр при создании экземпляра
+        if args:
+            self.name = args[0]
         else:
             self.name = input('Как к тебе можно обращаться? ')
         self.hidden_word = random_word(WORDS)
@@ -82,7 +83,7 @@ class GallowGame():
 
 
 def main():
-    game = GallowGame()
+    game = GallowGame('yura')
     print("Привет, {}. Давай поиграем!".format(game.name))
     print("У тебя есть 4 попытки угадать загаданное слово. Поееехаллии!")
     print("Загадано слово из",len(game.hidden_word), "букв.")
