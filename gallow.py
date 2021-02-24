@@ -6,8 +6,11 @@ def random_word(WORDS):
 
 class GallowGame():
 
-    def __init__(self):
-        self.name = input('Как к тебе можно обращаться? ')
+    def __init__(self, name):
+        if name:
+            self.name = name
+        else:
+            self.name = input('Как к тебе можно обращаться? ')
         self.hidden_word = random_word(WORDS)
         self.MAX_WRONG_ATTEMPTS = 4
         self.current_wrong_attempts = 0
