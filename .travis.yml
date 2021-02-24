@@ -7,6 +7,6 @@ install:
 - pip install -r requirements.txt
 - pip install coverage
 script:
-- coverage run --omit --include='gallow.py' -m pytest test_cases.py
+- coverage run --include='gallow.py' -m pytest test_cases.py
 - coverage report -m
 
